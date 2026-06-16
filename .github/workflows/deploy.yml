@@ -37,6 +37,8 @@ jobs:
 
     steps:
       - name: Deploy to Dev
+        env:
+          NODE_ENV: ${{ vars.NODE_ENV }}
         run: echo "Deploying to NODE_ENV=$NODE_ENV server..."
 
   deploy-staging:
@@ -47,6 +49,8 @@ jobs:
 
     steps:
       - name: Deploy to Staging
+        env:
+          NODE_ENV: ${{ vars.NODE_ENV }}
         run: echo "Deploying to NODE_ENV=$NODE_ENV server..."
 
   deploy-production:
@@ -57,4 +61,6 @@ jobs:
 
     steps:
       - name: Deploy to Production
+        env:
+          NODE_ENV: ${{ vars.NODE_ENV }}
         run: echo "Deploying to NODE_ENV=$NODE_ENV server..."
