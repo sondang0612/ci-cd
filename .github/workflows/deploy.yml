@@ -37,8 +37,7 @@ jobs:
 
     steps:
       - name: Deploy to Dev
-        run: echo "Deploying to DEV server..."
-        # ssh / docker / kubectl ở đây
+        run: echo "Deploying to NODE_ENV=$NODE_ENV server..."
 
   deploy-staging:
     needs: build
@@ -48,7 +47,7 @@ jobs:
 
     steps:
       - name: Deploy to Staging
-        run: echo "Deploying to STAGING server..."
+        run: echo "Deploying to NODE_ENV=$NODE_ENV server..."
 
   deploy-production:
     needs: build
@@ -58,4 +57,4 @@ jobs:
 
     steps:
       - name: Deploy to Production
-        run: echo "Deploying to PRODUCTION server..."
+        run: echo "Deploying to NODE_ENV=$NODE_ENV server..."
