@@ -15,7 +15,7 @@ export default function Home() {
     <ul>
       {data?.countries.map((c: Country) => (
         <li key={c.code}>
-          {c.emoji} {c.name}
+          hi {c.emoji} {c.name}
         </li>
       ))}
     </ul>
